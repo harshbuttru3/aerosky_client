@@ -1,0 +1,151 @@
+
+
+const mongoose = require('mongoose')
+		
+const pilotSchema =  new mongoose.Schema({
+	name:{
+		type: String,
+		required: true,
+		max:40,
+	},
+	email:{
+		type:String,
+		default:'',
+		required:true,
+		unique:true
+	},
+	image:{
+		type:String,
+		default:'',
+	},
+	number:{
+		type:String,
+		default:''
+	},
+	location:{
+		type:String,
+		default:''
+	},
+	password:{
+		type:String,
+		required:true
+	},
+	previousWorkExperience:{
+		type:String,
+		default:''
+	},
+	roles:{
+		type:Array,
+		default:['pilot']
+	},
+	status:{
+		type:String,
+		default:'Available'
+	},
+	aadharPdf:{
+		type:String,
+		default:'-None-'
+	},
+	aadharNumber:{
+		type:String,
+		default:'-None-'
+	},
+	willingToJoinAs:{
+		type:String,
+		default:'-None-'
+	},
+	willingEvents:{
+		type:String,
+		default:'-None-'
+	},
+	canTravelPanIndia:{
+		type:String,
+		default:'-None-'
+	},
+	district:{
+		type:String,
+		default:'-None-'
+	},
+	state:{
+		type:String,
+		default:'-None-'
+	},
+	havePassport:{
+		type:String,
+		default:'-None-'
+	},
+	canFlyDrone:{
+		type:String,
+		default:'-None-'
+	},
+	experience:{
+		type:String,
+		default:'-None-'
+	},
+	haveDCGACertificate:{
+		type:String,
+		default:'-None-'
+	},
+	dronesHaving:{
+		type:Array,
+		default:[]
+	},
+	uinNumber:{
+		type:String,
+		default:'-None-'
+	},
+	flyAutonomousPaths:{
+		type:String,
+		default:'-None-'
+	},
+	noOfBatteries:{
+		type:String,
+		default:'-None-'
+	},
+	flyHillyAreas:{
+		type:String,
+		default:'-None-'
+	},
+	flyFPVDrone:{
+		type:String,
+		default:'-None-'
+	},
+	deviceConnectToRC:{
+		type:String,
+		default:'-None-'
+	},
+	singleDayCharge:{
+		type:String,
+		default:'-None-'
+	},
+	skills:{
+		type:Array,
+		default:[]
+	},
+	assignedProjects:{
+		type:Array,
+		default:[]
+	},
+	softwares:{
+		type:Array,
+		default:[]
+	},
+	dronesId:{
+		type:Array,
+		default:[]
+	},
+	batteriesId:{
+		type:Array,
+		default:[]
+	}
+	},
+	{
+		timestamps:true,
+	}
+)
+
+
+module.exports = mongoose.model("Pilot",pilotSchema)
+
+
+
