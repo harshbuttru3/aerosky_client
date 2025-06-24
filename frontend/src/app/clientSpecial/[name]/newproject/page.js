@@ -1,9 +1,4 @@
 "use client";
-<<<<<<< HEAD
-
-=======
-import NewProjectForm from "../../../../components/NewProjectComponents/NewProjectForm";
->>>>>>> b4fd924 (resolved logout in /clientdashboard/sites after refreshing)
 import { useState } from "react";
 import { currentUserState } from "../../../../atoms/userAtom";
 import { useRecoilState } from "recoil";
